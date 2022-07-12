@@ -30,48 +30,48 @@ public class PlayerField {
 
     public void startGame(){
         Scanner s1 = new Scanner(System.in);
-        System.out.println("введите имя, с которым вы продолжите игру: ");
+        System.out.println("РІРІРµРґРёС‚Рµ РёРјСЏ, СЃ РєРѕС‚РѕСЂС‹Рј РІС‹ РїСЂРѕРґРѕР»Р¶РёС‚Рµ РёРіСЂСѓ: ");
         name = s1.nextLine();
     }
 
     public void addShips(PlayerField field1){
-        System.out.println("Введите координаты четырехпалубного корабля (формат x1,y1,x2,y2,x3,y3,x4,y4): " );
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ С‡РµС‚С‹СЂРµС…РїР°Р»СѓР±РЅРѕРіРѕ РєРѕСЂР°Р±Р»СЏ (С„РѕСЂРјР°С‚ x1,y1,x2,y2,x3,y3,x4,y4): " );
         four1 = new Four(field1);
         field1.printField();
 
-        System.out.println("Введите координаты первого трехпалубного корабля (формат x1,y1,x2,y2,x3,y3): ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ РїРµСЂРІРѕРіРѕ С‚СЂРµС…РїР°Р»СѓР±РЅРѕРіРѕ РєРѕСЂР°Р±Р»СЏ (С„РѕСЂРјР°С‚ x1,y1,x2,y2,x3,y3): ");
         three1 = new Three(field1);
         field1.printField();
 
-        System.out.println("Введите координаты второго трехпалубного корабля (формат x1,y1,x2,y2,x3,y3): ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ РІС‚РѕСЂРѕРіРѕ С‚СЂРµС…РїР°Р»СѓР±РЅРѕРіРѕ РєРѕСЂР°Р±Р»СЏ (С„РѕСЂРјР°С‚ x1,y1,x2,y2,x3,y3): ");
         three2 = new Three(field1);
         field1.printField();
 
-        System.out.println("Введите координаты первого двухпалубного корабля (формат x1,y1,x2,y2): ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ РїРµСЂРІРѕРіРѕ РґРІСѓС…РїР°Р»СѓР±РЅРѕРіРѕ РєРѕСЂР°Р±Р»СЏ (С„РѕСЂРјР°С‚ x1,y1,x2,y2): ");
         two1 = new Two(field1);
         field1.printField();
 
-        System.out.println("Введите координаты второго двухпалубного корабля (формат x1,y1,x2,y2): ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ РІС‚РѕСЂРѕРіРѕ РґРІСѓС…РїР°Р»СѓР±РЅРѕРіРѕ РєРѕСЂР°Р±Р»СЏ (С„РѕСЂРјР°С‚ x1,y1,x2,y2): ");
         two2 = new Two(field1);
         field1.printField();
 
-        System.out.println("Введите координаты третьего двухпалубного корабля (формат x1,y1,x2,y2): ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ С‚СЂРµС‚СЊРµРіРѕ РґРІСѓС…РїР°Р»СѓР±РЅРѕРіРѕ РєРѕСЂР°Р±Р»СЏ (С„РѕСЂРјР°С‚ x1,y1,x2,y2): ");
         two3 = new Two(field1);
         field1.printField();
 
-        System.out.println("Введите координаты первого однопалубного корабля (формат x1,y1): ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ РїРµСЂРІРѕРіРѕ РѕРґРЅРѕРїР°Р»СѓР±РЅРѕРіРѕ РєРѕСЂР°Р±Р»СЏ (С„РѕСЂРјР°С‚ x1,y1): ");
         one1 = new One(field1);
         field1.printField();
 
-        System.out.println("Введите координаты второго однопалубного корабля (формат x1,y1): ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ РІС‚РѕСЂРѕРіРѕ РѕРґРЅРѕРїР°Р»СѓР±РЅРѕРіРѕ РєРѕСЂР°Р±Р»СЏ (С„РѕСЂРјР°С‚ x1,y1): ");
         one2 = new One(field1);
         field1.printField();
 
-        System.out.println("Введите координаты третьего однопалубного корабля (формат x1,y1): ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ С‚СЂРµС‚СЊРµРіРѕ РѕРґРЅРѕРїР°Р»СѓР±РЅРѕРіРѕ РєРѕСЂР°Р±Р»СЏ (С„РѕСЂРјР°С‚ x1,y1): ");
         one3 = new One(field1);
         field1.printField();
 
-        System.out.println("Введите координаты четвертого однопалубного корабля (формат x1,y1): ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ С‡РµС‚РІРµСЂС‚РѕРіРѕ РѕРґРЅРѕРїР°Р»СѓР±РЅРѕРіРѕ РєРѕСЂР°Р±Р»СЏ (С„РѕСЂРјР°С‚ x1,y1): ");
         one4 = new One(field1);
         field1.printField();
     }
@@ -80,7 +80,7 @@ public class PlayerField {
         int x = 0;
         int y = 0;
         try {
-            System.out.println("Введите координаты для выстрела: ");
+            System.out.println("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ РґР»СЏ РІС‹СЃС‚СЂРµР»Р°: ");
             Scanner s1 = new Scanner(System.in);
             String[] lineStr;
             String line = s1.nextLine();
@@ -89,27 +89,27 @@ public class PlayerField {
             y = Integer.parseInt(lineStr[1]);
 
             if(lineStr.length != 2){
-                System.out.println("Для выстрела нужно две координаты!");
+                System.out.println("Р”Р»СЏ РІС‹СЃС‚СЂРµР»Р° РЅСѓР¶РЅРѕ РґРІРµ РєРѕРѕСЂРґРёРЅР°С‚С‹!");
                 shot(field1, field2);
             }
 
             if(x < 0 | x > 9 | y < 0 | y > 9) {
-                System.out.println("Координаты выстрела могут быть только в промежутке от 0 до 9!");
+                System.out.println("РљРѕРѕСЂРґРёРЅР°С‚С‹ РІС‹СЃС‚СЂРµР»Р° РјРѕРіСѓС‚ Р±С‹С‚СЊ С‚РѕР»СЊРєРѕ РІ РїСЂРѕРјРµР¶СѓС‚РєРµ РѕС‚ 0 РґРѕ 9!");
                 shot(field1, field2);
             }
         } catch (ArrayIndexOutOfBoundsException id){
-            System.out.println("Для выстрела нужно две координаты!");
+            System.out.println("Р”Р»СЏ РІС‹СЃС‚СЂРµР»Р° РЅСѓР¶РЅРѕ РґРІРµ РєРѕРѕСЂРґРёРЅР°С‚С‹!");
             shot(field1, field2);
         }
 
         if(field2.getField()[y][x].equals(String.valueOf(Ships.BROKEN))){
-            System.out.println("В это место уже стреляли!");
+            System.out.println("Р’ СЌС‚Рѕ РјРµСЃС‚Рѕ СѓР¶Рµ СЃС‚СЂРµР»СЏР»Рё!");
             shot(field1, field2);
         }
         if(field2.getField()[y][x].equals(String.valueOf(Ships.EMPTY)) || field2.getField()[y][x].equals(String.valueOf(Ships.AREAL))) {
             field2.getField()[y][x] = String.valueOf(Ships.BROKEN);
-            System.out.println("Мимо!");
-            System.out.println(field2.getName() + ", твой ход!");
+            System.out.println("РњРёРјРѕ!");
+            System.out.println(field2.getName() + ", С‚РІРѕР№ С…РѕРґ!");
             shot(field2, field1);
         }
         if(field2.getField()[y][x].equals(String.valueOf(Ships.SHIP))){
@@ -121,12 +121,12 @@ public class PlayerField {
                         field2.getField()[four1.getY2()][four1.getX2()].equals(String.valueOf(Ships.SHIP)) ||
                         field2.getField()[four1.getY3()][four1.getX3()].equals(String.valueOf(Ships.SHIP)) ||
                         field2.getField()[four1.getY4()][four1.getX4()].equals(String.valueOf(Ships.SHIP))) {
-                    System.out.println("Попал!");
+                    System.out.println("РџРѕРїР°Р»!");
                     shot(field1, field2);
                 } else {
-                    System.out.println("Утопил!");
+                    System.out.println("РЈС‚РѕРїРёР»!");
                     if(field2.getCounter() == 20){
-                        System.out.println("Все корабли противника уничтожены, " + field1.getName() + ", ты победил!");
+                        System.out.println("Р’СЃРµ РєРѕСЂР°Р±Р»Рё РїСЂРѕС‚РёРІРЅРёРєР° СѓРЅРёС‡С‚РѕР¶РµРЅС‹, " + field1.getName() + ", С‚С‹ РїРѕР±РµРґРёР»!");
                     } else {
                         shot(field1, field2);
                     }
@@ -138,12 +138,12 @@ public class PlayerField {
                 if(field2.getField()[three1.getY1()][three1.getX1()].equals(String.valueOf(Ships.SHIP)) ||
                         field2.getField()[three1.getY2()][three1.getX2()].equals(String.valueOf(Ships.SHIP)) ||
                         field2.getField()[three1.getY3()][three1.getX3()].equals(String.valueOf(Ships.SHIP))) {
-                    System.out.println("Попал!");
+                    System.out.println("РџРѕРїР°Р»!");
                     shot(field1, field2);
                 } else {
-                    System.out.println("Утопил!");
+                    System.out.println("РЈС‚РѕРїРёР»!");
                     if(field2.getCounter() == 20){
-                        System.out.println("Все корабли противника уничтожены, " + field1.getName() + ", ты победил!");
+                        System.out.println("Г‚Г±ГҐ ГЄГ®Г°Г ГЎГ«ГЁ ГЇГ°Г®ГІГЁГўГ­ГЁГЄГ  ГіГ­ГЁГ·ГІГ®Г¦ГҐГ­Г», " + field1.getName() + ", ГІГ» ГЇГ®ГЎГҐГ¤ГЁГ«!");
                     } else {
                         shot(field1, field2);
                     }
@@ -155,12 +155,12 @@ public class PlayerField {
                 if(field2.getField()[three2.getY1()][three2.getX1()].equals(String.valueOf(Ships.SHIP)) ||
                         field2.getField()[three2.getY2()][three2.getX2()].equals(String.valueOf(Ships.SHIP)) ||
                         field2.getField()[three2.getY3()][three2.getX3()].equals(String.valueOf(Ships.SHIP))) {
-                    System.out.println("Попал!");
+                    System.out.println("ГЏГ®ГЇГ Г«!");
                     shot(field1, field2);
                 } else {
-                    System.out.println("Утопил!");
+                    System.out.println("Г“ГІГ®ГЇГЁГ«!");
                     if(field2.getCounter() == 20){
-                        System.out.println("Все корабли противника уничтожены, " + field1.getName() + ", ты победил!");
+                        System.out.println("Р’СЃРµ РєРѕСЂР°Р±Р»Рё РїСЂРѕС‚РёРІРЅРёРєР° СѓРЅРёС‡С‚РѕР¶РµРЅС‹, " + field1.getName() + ", С‚С‹ РїРѕР±РµРґРёР»!");
                     } else {
                         shot(field1, field2);
                     }
@@ -170,12 +170,12 @@ public class PlayerField {
                 field2.getField()[y][x] = String.valueOf(Ships.BROKEN);
                 if(field2.getField()[two1.getY1()][two1.getX1()].equals(String.valueOf(Ships.SHIP)) ||
                         field2.getField()[two1.getY2()][two1.getX2()].equals(String.valueOf(Ships.SHIP))) {
-                    System.out.println("Попал!");
+                    System.out.println("РџРѕРїР°Р»!");
                     shot(field1, field2);
                 } else {
-                    System.out.println("Утопил!");
+                    System.out.println("РЈС‚РѕРїРёР»!");
                     if(field2.getCounter() == 20){
-                        System.out.println("Все корабли противника уничтожены, " + field1.getName() + ", ты победил!");
+                        System.out.println("Р’СЃРµ РєРѕСЂР°Р±Р»Рё РїСЂРѕС‚РёРІРЅРёРєР° СѓРЅРёС‡С‚РѕР¶РµРЅС‹, " + field1.getName() + ", С‚С‹ РїРѕР±РµРґРёР»!");
                     } else {
                         shot(field1, field2);
                     }
@@ -185,12 +185,12 @@ public class PlayerField {
                 field2.getField()[y][x] = String.valueOf(Ships.BROKEN);
                 if(field2.getField()[two2.getY1()][two2.getX1()].equals(String.valueOf(Ships.SHIP)) ||
                         field2.getField()[two2.getY2()][two2.getX2()].equals(String.valueOf(Ships.SHIP))) {
-                    System.out.println("Попал!");
+                    System.out.println("РџРѕРїР°Р»!");
                     shot(field1, field2);
                 } else {
-                    System.out.println("Утопил!");
+                    System.out.println("РЈС‚РѕРїРёР»!");
                     if(field2.getCounter() == 20){
-                        System.out.println("Все корабли противника уничтожены, " + field1.getName() + ", ты победил!");
+                        System.out.println("Р’СЃРµ РєРѕСЂР°Р±Р»Рё РїСЂРѕС‚РёРІРЅРёРєР° СѓРЅРёС‡С‚РѕР¶РµРЅС‹, " + field1.getName() + ", С‚С‹ РїРѕР±РµРґРёР»!");
                     } else {
                         shot(field1, field2);
                     }
@@ -200,12 +200,12 @@ public class PlayerField {
                 field2.getField()[y][x] = String.valueOf(Ships.BROKEN);
                 if(field2.getField()[two3.getY1()][two3.getX1()].equals(String.valueOf(Ships.SHIP)) ||
                         field2.getField()[two3.getY2()][two3.getX2()].equals(String.valueOf(Ships.SHIP))) {
-                    System.out.println("Попал!");
+                    System.out.println("РџРѕРїР°Р»!");
                     shot(field1, field2);
                 } else {
-                    System.out.println("Утопил!");
+                    System.out.println("РЈС‚РѕРїРёР»!");
                     if(field2.getCounter() == 20){
-                        System.out.println("Все корабли противника уничтожены, " + field1.getName() + ", ты победил!");
+                        System.out.println("Р’СЃРµ РєРѕСЂР°Р±Р»Рё РїСЂРѕС‚РёРІРЅРёРєР° СѓРЅРёС‡С‚РѕР¶РµРЅС‹, " + field1.getName() + ", С‚С‹ РїРѕР±РµРґРёР»!");
                     } else {
                         shot(field1, field2);
                     }
@@ -213,36 +213,36 @@ public class PlayerField {
             }
             if (x == one1.getX1() & y == one1.getY1()) {
                 field2.getField()[y][x] = String.valueOf(Ships.BROKEN);
-                System.out.println("Утопил!");
+                System.out.println("РЈС‚РѕРїРёР»!");
                 if(field2.getCounter() == 20){
-                    System.out.println("Все корабли противника уничтожены, " + field1.getName() + ", ты победил!");
+                    System.out.println("Р’СЃРµ РєРѕСЂР°Р±Р»Рё РїСЂРѕС‚РёРІРЅРёРєР° СѓРЅРёС‡С‚РѕР¶РµРЅС‹, " + field1.getName() + ", С‚С‹ РїРѕР±РµРґРёР»!");
                 } else {
                     shot(field1, field2);
                 }
             }
             if (x == one2.getX1() & y == one2.getY1()) {
                 field2.getField()[y][x] = String.valueOf(Ships.BROKEN);
-                System.out.println("Утопил!");
+                System.out.println("РЈС‚РѕРїРёР»!");
                 if(field2.getCounter() == 20){
-                    System.out.println("Все корабли противника уничтожены, " + field1.getName() + ", ты победил!");
+                    System.out.println("Р’СЃРµ РєРѕСЂР°Р±Р»Рё РїСЂРѕС‚РёРІРЅРёРєР° СѓРЅРёС‡С‚РѕР¶РµРЅС‹, " + field1.getName() + ", С‚С‹ РїРѕР±РµРґРёР»!");
                 } else {
                     shot(field1, field2);
                 }
             }
             if (x == one3.getX1() & y == one3.getY1()) {
                 field2.getField()[y][x] = String.valueOf(Ships.BROKEN);
-                System.out.println("Утопил!");
+                System.out.println("РЈС‚РѕРїРёР»!");
                 if(field2.getCounter() == 20){
-                    System.out.println("Все корабли противника уничтожены, " + field1.getName() + ", ты победил!\nПоздравляем!!!");
+                    System.out.println("Р’СЃРµ РєРѕСЂР°Р±Р»Рё РїСЂРѕС‚РёРІРЅРёРєР° СѓРЅРёС‡С‚РѕР¶РµРЅС‹, " + field1.getName() + ", С‚С‹ РїРѕР±РµРґРёР»!");
                 } else {
                     shot(field1, field2);
                 }
             }
             if (x == one4.getX1() & y == one4.getY1()) {
                 field2.getField()[y][x] = String.valueOf(Ships.BROKEN);
-                System.out.println("Утопил!");
+                System.out.println("РЈС‚РѕРїРёР»!");
                 if(field2.getCounter() == 20){
-                    System.out.println("Все корабли противника уничтожены, " + field1.getName() + ", ты победил!\nПоздравляем!!!");
+                    System.out.println("Р’СЃРµ РєРѕСЂР°Р±Р»Рё РїСЂРѕС‚РёРІРЅРёРєР° СѓРЅРёС‡С‚РѕР¶РµРЅС‹, " + field1.getName() + ", С‚С‹ РїРѕР±РµРґРёР»!");
                 } else {
                     shot(field1, field2);
                 }
