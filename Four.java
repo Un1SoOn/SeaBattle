@@ -12,7 +12,7 @@ public class Four {
     private int x4;
     private int y4;
 
-    //конструктор
+    //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 
 
     public Four(PlayerField field) {
@@ -31,28 +31,28 @@ public class Four {
             y4 = Integer.parseInt(lineStr[7]);
 
             if(lineStr.length != 8){
-                System.out.println("У четырехпалубного корабля должно быть 4 координаты!");
+                System.out.println("РЈ С‡РµС‚С‹СЂРµС…РїР°Р»СѓР±РЅРѕРіРѕ РєРѕСЂР°Р±Р»СЏ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ 8 РєРѕРѕСЂРґРёРЅР°С‚!");
                 removeCoordinates(field);
             }
 
         } catch (ArrayIndexOutOfBoundsException id) {
-            System.out.println("У четырехпалубного корабля должно быть 4 координаты!");
+            System.out.println("РЈ С‡РµС‚С‹СЂРµС…РїР°Р»СѓР±РЅРѕРіРѕ РєРѕСЂР°Р±Р»СЏ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ 8 РєРѕРѕСЂРґРёРЅР°С‚!");
             removeCoordinates(field);
         }
         if(getX1() < 0 | getX1() > 9 | getY1() < 0 | getY1() > 9 | getX2() < 0 | getX2() > 9 | getY2() < 0 | getY2() > 9 |
                 getX3() < 0 | getX3() > 9 | getY3() < 0 | getY3() > 9 | getX4() < 0 | getX4() > 9 | getY4() < 0 | getY4() > 9 ) {
-            System.out.println("Координаты корабля должны быть в пределе от 0 до 9!");
+            System.out.println("РљРѕРѕСЂРґРёРЅР°С‚С‹ РєРѕСЂР°Р±Р»СЏ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РІ РїСЂРµРґРµР»Рµ РѕС‚ 0 РґРѕ 9!");
             removeCoordinates(field);
         }
         if(getX1() == getX2() & getX1() == getX3() & getX1() == getX4()){
             if(getY1() == getY2() | getY1() == getY3() | getY1() == getY4() | getY2() == getY3() | getY2() == getY4() | getY3() == getY4()) {
-                System.out.println("У двух частей корабля не могут быть одинаковые координаты!");
+                System.out.println("РЈ РґРІСѓС… С‡Р°СЃС‚РµР№ РєРѕСЂР°Р±Р»СЏ РЅРµ РјРѕРіСѓС‚ Р±С‹С‚СЊ РѕРґРёРЅР°РєРѕРІС‹Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹!");
                 removeCoordinates(field);
             }
         }
         if(getY1() == getY2() & getY1() == getY3() & getY1() == getY4()){
             if(getX1() == getX2() | getX1() == getX3() | getX1() == getX4() | getX2() == getX3() | getX2() == getX4() | getX3() == getX4()) {
-                System.out.println("У двух частей корабля не могут быть одинаковые координаты!");
+                System.out.println("РЈ РґРІСѓС… С‡Р°СЃС‚РµР№ РєРѕСЂР°Р±Р»СЏ РЅРµ РјРѕРіСѓС‚ Р±С‹С‚СЊ РѕРґРёРЅР°РєРѕРІС‹Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹!");
                 removeCoordinates(field);
             }
         }
@@ -62,11 +62,11 @@ public class Four {
                         getY4() ==  getY1() + 1 | getY4() == getY1() - 1) {
 
                 } else {
-                    System.out.println("Части корабля не могут находиться в отдельно!");
+                    System.out.println("Р§Р°СЃС‚Рё РєРѕСЂР°Р±Р»СЏ РЅРµ РјРѕРіСѓС‚ РЅР°С…РѕРґРёС‚СЊСЃСЏ РІ РѕС‚РґРµР»СЊРЅРѕ!");
                     removeCoordinates(field);
                 }
             } else {
-                System.out.println("Части корабля не могут находиться в отдельно!");
+                System.out.println("Р§Р°СЃС‚Рё РєРѕСЂР°Р±Р»СЏ РЅРµ РјРѕРіСѓС‚ РЅР°С…РѕРґРёС‚СЊСЃСЏ РІ РѕС‚РґРµР»СЊРЅРѕ!");
                 removeCoordinates(field);
             }
         } else if (getY1() == getY2() & getX2() == getX1() + 1 | getX2() == getX1() - 1){
@@ -75,20 +75,20 @@ public class Four {
                         getX3() == getX1() + 1 | getX3() == getX1() - 1) {
 
                 } else {
-                    System.out.println("Части корабля не могут находиться в отдельно!");
+                    System.out.println("Р§Р°СЃС‚Рё РєРѕСЂР°Р±Р»СЏ РЅРµ РјРѕРіСѓС‚ РЅР°С…РѕРґРёС‚СЊСЃСЏ РІ РѕС‚РґРµР»СЊРЅРѕ!");
                     removeCoordinates(field);
                 }
             } else {
-                System.out.println("Части корабля не могут находиться в отдельно!");
+                System.out.println("Р§Р°СЃС‚Рё РєРѕСЂР°Р±Р»СЏ РЅРµ РјРѕРіСѓС‚ РЅР°С…РѕРґРёС‚СЊСЃСЏ РІ РѕС‚РґРµР»СЊРЅРѕ!");
                 removeCoordinates(field);
             }
         } else {
-            System.out.println("Части корабля не могут находиться в отдельно!");
+            System.out.println("Р§Р°СЃС‚Рё РєРѕСЂР°Р±Р»СЏ РЅРµ РјРѕРіСѓС‚ РЅР°С…РѕРґРёС‚СЊСЃСЏ РІ РѕС‚РґРµР»СЊРЅРѕ!");
             removeCoordinates(field);
         }
 
-        //выставление ареола и корабля
-        //корабль не касается углов
+        //РІС‹СЃС‚Р°РІР»РµРЅРёРµ Р°СЂРµРѕР»Р° Рё РєРѕСЂР°Р±Р»СЏ
+        //РєРѕСЂР°Р±Р»СЊ РЅРµ РєР°СЃР°РµС‚СЃСЏ СѓРіР»РѕРІ
         if(getX1() != 0 & getX1() != 9 & getX4() != 0 & getX4() != 9 & getY1() != 0 & getY1() != 9 & getY4() != 0 & getY4() != 9){
             if(getX1() == getX4()){
                 if(getY1() < getY4()){
@@ -145,8 +145,8 @@ public class Four {
 
         }
 
-        //четырехпалубный корабль стоит в углу
-        //левый верхний угол
+        //С‡РµС‚С‹СЂРµС…РїР°Р»СѓР±РЅС‹Р№ РєРѕСЂР°Р±Р»СЊ СЃС‚РѕРёС‚ РІ СѓРіР»Сѓ
+        //Р»РµРІС‹Р№ РІРµСЂС…РЅРёР№ СѓРіРѕР»
         if(getX1() == 0 & getY1() == 0){
             if(getX2() == 1) {
                 for(int i = getY1(); i <= getY1() + 1; i++){
@@ -200,7 +200,7 @@ public class Four {
             }
         }
 
-        //левый нижний угол
+        //Р»РµРІС‹Р№ РЅРёР¶РЅРёР№ СѓРіРѕР»
         if(getX1() == 0 & getY1() == 9){
             if(getX2() == 0){
                 for(int i = getY1() - 4; i <= getY1(); i++){
@@ -254,7 +254,7 @@ public class Four {
             }
         }
 
-        //правый нижний угол
+        //РїСЂР°РІС‹Р№ РЅРёР¶РЅРёР№ СѓРіРѕР»
         if(getX1() == 9 & getY1() == 9){
             if(getX2() == 8){
                 for(int i = getY1() - 1; i <= getY1(); i++){
@@ -308,7 +308,7 @@ public class Four {
             }
         }
 
-        //правый верхний угол
+        //РїСЂР°РІС‹Р№ РІРµСЂС…РЅРёР№ СѓРіРѕР»
         if(getX1() == 9 & getY1() == 0){
             if(getX2() == 9){
                 for(int i = getY1(); i <= getY1() + 4; i++){
@@ -363,8 +363,8 @@ public class Four {
         }
 
 
-        //четырехпалубный всеми палубами касается края
-        //левый край
+        //С‡РµС‚С‹СЂРµС…РїР°Р»СѓР±РЅС‹Р№ РІСЃРµРјРё РїР°Р»СѓР±Р°РјРё РєР°СЃР°РµС‚СЃСЏ РєСЂР°СЏ
+        //Р»РµРІС‹Р№ РєСЂР°Р№
         if(getX1() == 0 & getX4() == 0 & getY1() != 0 & getY4() != 9 & getY1() != 9 & getY4() != 9){
             if(getY1() < getY4()){
                 for(int i = getY1() - 1; i<=getY1() + 4; i++){
@@ -391,7 +391,7 @@ public class Four {
                 return;
             }
         }
-        //правый край
+        //РїСЂР°РІС‹Р№ РєСЂР°Р№
         if(getX1() == 9 & getX4() == 9 & getY1() != 0 & getY4() != 9 & getY1() != 9 & getY4() != 9){
             if(getY1() < getY4()){
                 for(int i = getY1() - 1; i <= getY1() + 4; i++){
@@ -418,7 +418,7 @@ public class Four {
                 return;
             }
         }
-        //верхний край
+        //РІРµСЂС…РЅРёР№ РєСЂР°Р№
         if(getY1() == 0 & getY4() == 0 & getX1() != 0 & getX4() != 9 & getX1() != 9 & getX4() != 9){
             if(getX1() < getX4()){
                 for(int i = getY1(); i <= getY1() + 1; i++){
@@ -445,7 +445,7 @@ public class Four {
                 return;
             }
         }
-        //нижний край
+        //РЅРёР¶РЅРёР№ РєСЂР°Р№
         if(getY1() == 9 & getY4() == 9 & getX1() != 0 & getX4() != 9 & getX1() != 9 & getX4() != 9){
             if(getX1() < getX4()){
                 for(int i = getY1() - 1; i <= getY1(); i++){
@@ -472,8 +472,8 @@ public class Four {
                 return;
             }
         }
-        //корабль касается края одной палубой
-        //корабль касается левого края
+        //РєРѕСЂР°Р±Р»СЊ РєР°СЃР°РµС‚СЃСЏ РєСЂР°СЏ РѕРґРЅРѕР№ РїР°Р»СѓР±РѕР№
+        //РєРѕСЂР°Р±Р»СЊ РєР°СЃР°РµС‚СЃСЏ Р»РµРІРѕРіРѕ РєСЂР°СЏ
         if(getX1() == 0 & getX4() != 0 | getX4() == 0 & getX1() != 0 & getX2() != 0 & getX3() != 0 & getY1() != 0 & getY4() != 9 & getY1() != 9 & getY4() != 0){
             if(getX1() == 0){
                 for(int i = getY1() - 1; i <= getY1() + 1; i++){
@@ -500,7 +500,7 @@ public class Four {
                 return;
             }
         }
-        //корабль касается правого края
+        //РєРѕСЂР°Р±Р»СЊ РєР°СЃР°РµС‚СЃСЏ РїСЂР°РІРѕРіРѕ РєСЂР°СЏ
         if(getX1() == 9 | getX4() == 9 & getX2() != 9 & getX3() != 9 & getY1() != 0 & getY4() != 9 & getY1() != 9 & getY4() != 0){
             if(getX1() == 9){
                 for(int i = getY1() - 1; i <= getY1() + 1; i++){
@@ -527,7 +527,7 @@ public class Four {
                 return;
             }
         }
-        //корабль касается верхнего края
+        //РєРѕСЂР°Р±Р»СЊ РєР°СЃР°РµС‚СЃСЏ РІРµСЂС…РЅРµРіРѕ РєСЂР°СЏ
         if(getY1() == 0 & getY4() != 0 | getY4() == 0 | getY1() != 0 & getY2() != 0 & getY3() != 0 & getX1() != 0 & getX1() != 9 & getX4() != 0 & getX4() != 9){
             if(getY1() == 0){
                 for(int i = getY1(); i <= getY1() + 4; i++){
@@ -554,7 +554,7 @@ public class Four {
                 return;
             }
         }
-        //корабль касается нижнего края
+        //РєРѕСЂР°Р±Р»СЊ РєР°СЃР°РµС‚СЃСЏ РЅРёР¶РЅРµРіРѕ РєСЂР°СЏ
         if(getY1() == 9 | getY4() == 9 & getY2() != 9 & getY3() != 9 & getX1() != 0 & getX1() != 9 & getX4() != 0 & getX4() != 9){
             if(getY1() == 9){
                 for(int i = getY1() - 4; i <= getY1(); i++){
@@ -585,7 +585,7 @@ public class Four {
 
     public void removeCoordinates(PlayerField field){
         try {
-            System.out.println("Введите верные координаты!");
+            System.out.println("Р’РІРµРґРёС‚Рµ РІРµСЂРЅС‹Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹!");
             Scanner s1 = new Scanner(System.in);
             String[] lineStr;
             String line = s1.nextLine();
@@ -600,28 +600,28 @@ public class Four {
             y4 = Integer.parseInt(lineStr[7]);
 
             if(lineStr.length != 8){
-                System.out.println("У четырехпалубного корабля должно быть 4 координаты!");
+                System.out.println("РЈ С‡РµС‚С‹СЂРµС…РїР°Р»СѓР±РЅРѕРіРѕ РєРѕСЂР°Р±Р»СЏ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ 8 РєРѕРѕСЂРґРёРЅР°С‚!");
                 removeCoordinates(field);
             }
 
         } catch (ArrayIndexOutOfBoundsException id) {
-            System.out.println("У четырехпалубного корабля должно быть 4 координаты!");
+            System.out.println("РЈ С‡РµС‚С‹СЂРµС…РїР°Р»СѓР±РЅРѕРіРѕ РєРѕСЂР°Р±Р»СЏ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ 8 РєРѕРѕСЂРґРёРЅР°С‚!");
             removeCoordinates(field);
         }
         if(getX1() < 0 | getX1() > 9 | getY1() < 0 | getY1() > 9 | getX2() < 0 | getX2() > 9 | getY2() < 0 | getY2() > 9 |
                 getX3() < 0 | getX3() > 9 | getY3() < 0 | getY3() > 9 | getX4() < 0 | getX4() > 9 | getY4() < 0 | getY4() > 9 ) {
-            System.out.println("Координаты корабля должны быть в пределе от 0 до 9!");
+            System.out.println("РљРѕРѕСЂРґРёРЅР°С‚С‹ РєРѕСЂР°Р±Р»СЏ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РІ РїСЂРµРґРµР»Рµ РѕС‚ 0 РґРѕ 9!");
             removeCoordinates(field);
         }
         if(getX1() == getX2() & getX1() == getX3() & getX1() == getX4()){
             if(getY1() == getY2() | getY1() == getY3() | getY1() == getY4() | getY2() == getY3() | getY2() == getY4() | getY3() == getY4()) {
-                System.out.println("У двух частей корабля не могут быть одинаковые координаты!");
+                System.out.println("РЈ РґРІСѓС… С‡Р°СЃС‚РµР№ РєРѕСЂР°Р±Р»СЏ РЅРµ РјРѕРіСѓС‚ Р±С‹С‚СЊ РѕРґРёРЅР°РєРѕРІС‹Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹!");
                 removeCoordinates(field);
             }
         }
         if(getY1() == getY2() & getY1() == getY3() & getY1() == getY4()){
             if(getX1() == getX2() | getX1() == getX3() | getX1() == getX4() | getX2() == getX3() | getX2() == getX4() | getX3() == getX4()) {
-                System.out.println("У двух частей корабля не могут быть одинаковые координаты!");
+                System.out.println("РЈ РґРІСѓС… С‡Р°СЃС‚РµР№ РєРѕСЂР°Р±Р»СЏ РЅРµ РјРѕРіСѓС‚ Р±С‹С‚СЊ РѕРґРёРЅР°РєРѕРІС‹Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹!");
                 removeCoordinates(field);
             }
         }
@@ -631,11 +631,11 @@ public class Four {
                         getY4() ==  getY1() + 1 | getY4() == getY1() - 1) {
 
                 } else {
-                    System.out.println("Части корабля не могут находиться в отдельно!");
+                    System.out.println("Р§Р°СЃС‚Рё РєРѕСЂР°Р±Р»СЏ РЅРµ РјРѕРіСѓС‚ РЅР°С…РѕРґРёС‚СЊСЃСЏ РІ РѕС‚РґРµР»СЊРЅРѕ!");
                     removeCoordinates(field);
                 }
             } else {
-                System.out.println("Части корабля не могут находиться в отдельно!");
+                System.out.println("Р§Р°СЃС‚Рё РєРѕСЂР°Р±Р»СЏ РЅРµ РјРѕРіСѓС‚ РЅР°С…РѕРґРёС‚СЊСЃСЏ РІ РѕС‚РґРµР»СЊРЅРѕ!");
                 removeCoordinates(field);
             }
         } else if (getY1() == getY2() & getX2() == getX1() + 1 | getX2() == getX1() - 1){
@@ -644,20 +644,20 @@ public class Four {
                         getX3() == getX1() + 1 | getX3() == getX1() - 1) {
 
                 } else {
-                    System.out.println("Части корабля не могут находиться в отдельно!");
+                    System.out.println("Р§Р°СЃС‚Рё РєРѕСЂР°Р±Р»СЏ РЅРµ РјРѕРіСѓС‚ РЅР°С…РѕРґРёС‚СЊСЃСЏ РІ РѕС‚РґРµР»СЊРЅРѕ!");
                     removeCoordinates(field);
                 }
             } else {
-                System.out.println("Части корабля не могут находиться в отдельно!");
+                System.out.println("Р§Р°СЃС‚Рё РєРѕСЂР°Р±Р»СЏ РЅРµ РјРѕРіСѓС‚ РЅР°С…РѕРґРёС‚СЊСЃСЏ РІ РѕС‚РґРµР»СЊРЅРѕ!");
                 removeCoordinates(field);
             }
         } else {
-            System.out.println("Части корабля не могут находиться в отдельно!");
+            System.out.println("Р§Р°СЃС‚Рё РєРѕСЂР°Р±Р»СЏ РЅРµ РјРѕРіСѓС‚ РЅР°С…РѕРґРёС‚СЊСЃСЏ РІ РѕС‚РґРµР»СЊРЅРѕ!");
             removeCoordinates(field);
         }
 
-        //выставление ареола и корабля
-        //корабль не касается углов
+        //РІС‹СЃС‚Р°РІР»РµРЅРёРµ Р°СЂРµРѕР»Р° Рё РєРѕСЂР°Р±Р»СЏ
+        //РєРѕСЂР°Р±Р»СЊ РЅРµ РєР°СЃР°РµС‚СЃСЏ СѓРіР»РѕРІ
         if(getX1() != 0 & getX1() != 9 & getX4() != 0 & getX4() != 9 & getY1() != 0 & getY1() != 9 & getY4() != 0 & getY4() != 9){
             if(getX1() == getX4()){
                 if(getY1() < getY4()){
@@ -714,8 +714,8 @@ public class Four {
 
         }
 
-        //четырехпалубный корабль стоит в углу
-        //левый верхний угол
+        //С‡РµС‚С‹СЂРµС…РїР°Р»СѓР±РЅС‹Р№ РєРѕСЂР°Р±Р»СЊ СЃС‚РѕРёС‚ РІ СѓРіР»Сѓ
+        //Р»РµРІС‹Р№ РІРµСЂС…РЅРёР№ СѓРіРѕР»
         if(getX1() == 0 & getY1() == 0){
             if(getX2() == 1) {
                 for(int i = getY1(); i <= getY1() + 1; i++){
@@ -769,7 +769,7 @@ public class Four {
             }
         }
 
-        //левый нижний угол
+        //Р»РµРІС‹Р№ РЅРёР¶РЅРёР№ СѓРіРѕР»
         if(getX1() == 0 & getY1() == 9){
             if(getX2() == 0){
                 for(int i = getY1() - 4; i <= getY1(); i++){
@@ -823,7 +823,7 @@ public class Four {
             }
         }
 
-        //правый нижний угол
+        //РїСЂР°РІС‹Р№ РЅРёР¶РЅРёР№ СѓРіРѕР»
         if(getX1() == 9 & getY1() == 9){
             if(getX2() == 8){
                 for(int i = getY1() - 1; i <= getY1(); i++){
@@ -877,7 +877,7 @@ public class Four {
             }
         }
 
-        //правый верхний угол
+        //РїСЂР°РІС‹Р№ РІРµСЂС…РЅРёР№ СѓРіРѕР»
         if(getX1() == 9 & getY1() == 0){
             if(getX2() == 9){
                 for(int i = getY1(); i <= getY1() + 4; i++){
@@ -932,8 +932,8 @@ public class Four {
         }
 
 
-        //четырехпалубный всеми палубами касается края
-        //левый край
+        //С‡РµС‚С‹СЂРµС…РїР°Р»СѓР±РЅС‹Р№ РІСЃРµРјРё РїР°Р»СѓР±Р°РјРё РєР°СЃР°РµС‚СЃСЏ РєСЂР°СЏ
+        //Р»РµРІС‹Р№ РєСЂР°Р№
         if(getX1() == 0 & getX4() == 0 & getY1() != 0 & getY4() != 9 & getY1() != 9 & getY4() != 9){
             if(getY1() < getY4()){
                 for(int i = getY1() - 1; i<=getY1() + 4; i++){
@@ -960,7 +960,7 @@ public class Four {
                 return;
             }
         }
-        //правый край
+        //РїСЂР°РІС‹Р№ РєСЂР°Р№
         if(getX1() == 9 & getX4() == 9 & getY1() != 0 & getY4() != 9 & getY1() != 9 & getY4() != 9){
             if(getY1() < getY4()){
                 for(int i = getY1() - 1; i <= getY1() + 4; i++){
@@ -987,7 +987,7 @@ public class Four {
                 return;
             }
         }
-        //верхний край
+        //РІРµСЂС…РЅРёР№ РєСЂР°Р№
         if(getY1() == 0 & getY4() == 0 & getX1() != 0 & getX4() != 9 & getX1() != 9 & getX4() != 9){
             if(getX1() < getX4()){
                 for(int i = getY1(); i <= getY1() + 1; i++){
@@ -1014,7 +1014,7 @@ public class Four {
                 return;
             }
         }
-        //нижний край
+        //РЅРёР¶РЅРёР№ РєСЂР°Р№
         if(getY1() == 9 & getY4() == 9 & getX1() != 0 & getX4() != 9 & getX1() != 9 & getX4() != 9){
             if(getX1() < getX4()){
                 for(int i = getY1() - 1; i <= getY1(); i++){
@@ -1041,8 +1041,8 @@ public class Four {
                 return;
             }
         }
-        //корабль касается края одной палубой
-        //корабль касается левого края
+        //РєРѕСЂР°Р±Р»СЊ РєР°СЃР°РµС‚СЃСЏ РєСЂР°СЏ РѕРґРЅРѕР№ РїР°Р»СѓР±РѕР№
+        //РєРѕСЂР°Р±Р»СЊ РєР°СЃР°РµС‚СЃСЏ Р»РµРІРѕРіРѕ РєСЂР°СЏ
         if(getX1() == 0 & getX4() != 0 | getX4() == 0 & getX1() != 0 & getX2() != 0 & getX3() != 0 & getY1() != 0 & getY4() != 9 & getY1() != 9 & getY4() != 0){
             if(getX1() == 0){
                 for(int i = getY1() - 1; i <= getY1() + 1; i++){
@@ -1069,7 +1069,7 @@ public class Four {
                 return;
             }
         }
-        //корабль касается правого края
+        //РєРѕСЂР°Р±Р»СЊ РєР°СЃР°РµС‚СЃСЏ РїСЂР°РІРѕРіРѕ РєСЂР°СЏ
         if(getX1() == 9 | getX4() == 9 & getX2() != 9 & getX3() != 9 & getY1() != 0 & getY4() != 9 & getY1() != 9 & getY4() != 0){
             if(getX1() == 9){
                 for(int i = getY1() - 1; i <= getY1() + 1; i++){
@@ -1096,7 +1096,7 @@ public class Four {
                 return;
             }
         }
-        //корабль касается верхнего края
+        //РєРѕСЂР°Р±Р»СЊ РєР°СЃР°РµС‚СЃСЏ РІРµСЂС…РЅРµРіРѕ РєСЂР°СЏ
         if(getY1() == 0 & getY4() != 0 | getY4() == 0 | getY1() != 0 & getY2() != 0 & getY3() != 0 & getX1() != 0 & getX1() != 9 & getX4() != 0 & getX4() != 9){
             if(getY1() == 0){
                 for(int i = getY1(); i <= getY1() + 4; i++){
@@ -1123,7 +1123,7 @@ public class Four {
                 return;
             }
         }
-        //корабль касается нижнего края
+        //РєРѕСЂР°Р±Р»СЊ РєР°СЃР°РµС‚СЃСЏ РЅРёР¶РЅРµРіРѕ РєСЂР°СЏ
         if(getY1() == 9 | getY4() == 9 & getY2() != 9 & getY3() != 9 & getX1() != 0 & getX1() != 9 & getX4() != 0 & getX4() != 9){
             if(getY1() == 9){
                 for(int i = getY1() - 4; i <= getY1(); i++){
@@ -1152,7 +1152,7 @@ public class Four {
         }
     }
 
-    //set/get методы
+    //set/get РјРµС‚РѕРґС‹
     public int getX1() {
         return x1;
     }
