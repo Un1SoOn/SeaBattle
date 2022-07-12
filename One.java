@@ -8,7 +8,7 @@ public class One {
     private int y1;
 
 
-    //конструктор
+    //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
     public One(PlayerField field) throws ArrayIndexOutOfBoundsException {
         try {
             Scanner s1 = new Scanner(System.in);
@@ -19,21 +19,21 @@ public class One {
             y1 = Integer.parseInt(lineStr[1]);
 
             if(lineStr.length != 2){
-                System.out.println("У однопалубного корабля должно быть 2 координаты!");
+                System.out.println("РЈ РѕРґРЅРѕРїР°Р»СѓР±РЅРѕРіРѕ РєРѕСЂР°Р±Р»СЏ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ 2 РєРѕРѕСЂРґРёРЅР°С‚С‹!");
                 removeCoordinates(field);
             }
 
         } catch (ArrayIndexOutOfBoundsException id) {
-            System.out.println("У однопалубного корабля должно быть 2 координаты!");
+            System.out.println("РЈ РѕРґРЅРѕРїР°Р»СѓР±РЅРѕРіРѕ РєРѕСЂР°Р±Р»СЏ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ 2 РєРѕРѕСЂРґРёРЅР°С‚С‹!");
             removeCoordinates(field);
         }
 
         if(getX1() < 0 | getX1() > 9 | getY1() < 0 | getY1() > 9) {
-            System.out.println("Координаты корабля должны быть в пределе от 0 до 9!");
+            System.out.println("РљРѕРѕСЂРґРёРЅР°С‚С‹ РєРѕСЂР°Р±Р»СЏ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РІ РїСЂРµРґРµР»Рµ РѕС‚ 0 РґРѕ 9!");
             removeCoordinates(field);
         }
         if(field.getField()[getY1()][getX1()].equals(String.valueOf(Ships.AREAL))){
-            System.out.println("Расстояние между кораблями должно быть не меньше 1 клетки!");
+            System.out.println("Р Р°СЃСЃС‚РѕСЏРЅРёРµ РјРµР¶РґСѓ РєРѕСЂР°Р±Р»СЏРјРё РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РЅРµ РјРµРЅСЊС€Рµ 1 РєР»РµС‚РєРё!");
             removeCoordinates(field);
         }
         if(field.getField()[getY1()][getX1()].equals(String.valueOf(Ships.EMPTY))){
@@ -114,7 +114,7 @@ public class One {
 
     public void removeCoordinates(PlayerField field){
         try {
-            System.out.println("Введите верные координаты!");
+            System.out.println("Р’РІРµРґРёС‚Рµ РІРµСЂРЅС‹Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹!");
             Scanner s1 = new Scanner(System.in);
             String[] lineStr;
             String line = s1.nextLine();
@@ -123,26 +123,26 @@ public class One {
             y1 = Integer.parseInt(lineStr[1]);
 
             if(lineStr.length != 2){
-                System.out.println("У однопалубного корабля должно быть 2 координаты!");
+                System.out.println("РЈ РѕРґРЅРѕРїР°Р»СѓР±РЅРѕРіРѕ РєРѕСЂР°Р±Р»СЏ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ 2 РєРѕРѕСЂРґРёРЅР°С‚С‹!");
                 removeCoordinates(field);
             }
 
         } catch (ArrayIndexOutOfBoundsException id) {
-            System.out.println("У однопалубного корабля должно быть 2 координаты!");
+            System.out.println("РЈ РѕРґРЅРѕРїР°Р»СѓР±РЅРѕРіРѕ РєРѕСЂР°Р±Р»СЏ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ 2 РєРѕРѕСЂРґРёРЅР°С‚С‹!");
             removeCoordinates(field);
         }
 
         if(x1 < 0 | x1 > 9 | y1 < 0 | y1 > 9) {
-            System.out.println("Координаты корабля должны быть в пределе от 0 до 9!");
+            System.out.println("РљРѕРѕСЂРґРёРЅР°С‚С‹ РєРѕСЂР°Р±Р»СЏ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РІ РїСЂРµРґРµР»Рµ РѕС‚ 0 РґРѕ 9!");
             removeCoordinates(field);
         }
 
         if(field.getField()[getY1()][getX1()].equals(String.valueOf(Ships.AREAL))){
-            System.out.println("Расстояние между кораблями должно быть не меньше 1 клетки!");
+            System.out.println("Р Р°СЃСЃС‚РѕСЏРЅРёРµ РјРµР¶РґСѓ РєРѕСЂР°Р±Р»СЏРјРё РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РЅРµ РјРµРЅСЊС€Рµ 1 РєР»РµС‚РєРё!");
             removeCoordinates(field);
         }
 
-        //выставление корабля и ареола
+        //РІС‹СЃС‚Р°РІР»РµРЅРёРµ РєРѕСЂР°Р±Р»СЏ Рё Р°СЂРµРѕР»Р°
 
         if(field.getField()[getY1()][getX1()].equals(String.valueOf(Ships.EMPTY))){
             if(getX1() == 0 && getY1() == 0){
@@ -221,7 +221,7 @@ public class One {
     }
 
 
-    //set/get методы
+    //set/get РјРµС‚РѕРґС‹
     public void setX1(int x1) {
         this.x1 = x1;
     }
